@@ -8,8 +8,8 @@ on:
   workflow_dispatch:
   schedule:
     - cron: 1 11,14 * * *
-  watch:
-    types: started
+  #watch:
+  #  types: started
 
 jobs:
   build:
