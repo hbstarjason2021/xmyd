@@ -16,16 +16,18 @@ jobs:
         run: |
           sudo -E apt-get -qq update
           sudo -E apt-get install zsh -y
+
+          pip install --upgrade pip
           
       - name: 初始化Python
         uses: actions/setup-python@v3
         with:
-          python-version: 3.8
+          python-version: 3.9
           
       - name: 开始
         env:
             CONFIG: ${{ secrets.CONFIG }}
         run: |
-          pip install --upgrade pip
+          
           pip3 install requests pytz
           python3 main.py
