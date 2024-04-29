@@ -26,5 +26,6 @@ jobs:
         env:
             CONFIG: ${{ secrets.CONFIG }}
         run: |
+          pip install --upgrade pip
           pip3 install requests pytz
           python3 main.py
